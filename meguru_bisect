@@ -1,0 +1,15 @@
+def is_ok(arg):
+    #条件を満たすかどうか判定する関数
+    pass
+
+def meguru_bisect(ng,ok):#ng=取りえる最小の値-1,ok = 取りえる最大の値(最大を求める場合はこれをひっくり返す)
+    #初期値のng,okを受け取り、is_okを満たす最小(最大)のokを返す
+    while (abs(ok-ng) > 1):#差が1or0になったら終了(探索するところがないため)
+        mid = (ok + ng) //2 #中央の値を求める
+        if is_ok(mid):#もしmidが条件に合うならば右端を狭める
+            ok = mid
+        else:
+            ng = mid
+        return ok
+
+
