@@ -5,3 +5,5 @@ def is_prime(n):
         if n % k == 0:
             return False
     return True
+
+#nが2未満なら素数ではない、nを2から√nまでの数字で割り切れるなら素数でない。それ以外なら素数
